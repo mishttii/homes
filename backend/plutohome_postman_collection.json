@@ -1,0 +1,239 @@
+{
+  "info": {
+    "_postman_id": "a1f0a2df-6b83-4a1e-8e54-e0c1f2e694fb",
+    "name": "Pluto Home API",
+    "description": "Postman Collection for Pluto Home Node/Express Backend containing API endpoints for Products and Orders.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Products",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/products",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "products"
+          ]
+        },
+        "description": "Retrieve all products from the in-memory store. Can optionally filter by category using a query param (e.g. ?category=pillow or ?category=bedsheet)."
+      },
+      "response": []
+    },
+    {
+      "name": "Search Products",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/products/search?q=blue",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "products",
+            "search"
+          ],
+          "query": [
+            {
+              "key": "q",
+              "value": "blue"
+            }
+          ]
+        },
+        "description": "Search products by name or description matching a search query 'q'."
+      },
+      "response": []
+    },
+    {
+      "name": "Get Single Product",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/products/pillow-blue",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "products",
+            "pillow-blue"
+          ]
+        },
+        "description": "Retrieve details of a single product using its unique ID."
+      },
+      "response": []
+    },
+    {
+      "name": "Create Product",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Gold Silk Pillow Cover\",\n  \"price\": 450,\n  \"description\": \"Luxurious gold silk pillow cover for standard pillows.\",\n  \"category\": \"pillow\",\n  \"image\": \"image/gold01.png\",\n  \"stock\": 10,\n  \"features\": [\n    \"100% Pure Mulberry Silk\",\n    \"Hypoallergenic\",\n    \"Hidden zipper design\"\n  ]\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/products",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "products"
+          ]
+        },
+        "description": "Add a new product to the catalog. Validates required fields."
+      },
+      "response": []
+    },
+    {
+      "name": "Update Product",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"price\": 420,\n  \"stock\": 25\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/products/pillow-blue",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "products",
+            "pillow-blue"
+          ]
+        },
+        "description": "Update specific fields of an existing product dynamically."
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Product",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/products/bedsheet-11",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "products",
+            "bedsheet-11"
+          ]
+        },
+        "description": "Delete a product from the list by its ID."
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Orders",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/orders",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "orders"
+          ]
+        },
+        "description": "Retrieve all placed orders."
+      },
+      "response": []
+    },
+    {
+      "name": "Create Order",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"customerName\": \"John Doe\",\n  \"whatsAppNumber\": \"919876543210\",\n  \"address\": \"Flat 204, Green Meadows, Mumbai, India\",\n  \"items\": [\n    {\n      \"productId\": \"bedsheet-02\",\n      \"name\": \"Bedsheet Design 2\",\n      \"quantity\": 1,\n      \"price\": 599\n    }\n  ],\n  \"totalAmount\": 599\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/orders",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "orders"
+          ]
+        },
+        "description": "Submit a new order. Validates required customer, shipping, and item details."
+      },
+      "response": []
+    },
+    {
+      "name": "Trigger Simulated Server Error",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/trigger-error",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "trigger-error"
+          ]
+        },
+        "description": "Simulates a server error to test global error handling middleware."
+      },
+      "response": []
+    }
+  ]
+}
