@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bedsheets Collection - Pluto Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🏠 Pluto Home</h1>
+    <nav>
+        <a href="index.html#products">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <button class="cart-icon" onclick="toggleCartDisplay()">🛒 Cart (<span id="cart-count">0</span>)</button>
+</header>
+
+<div id="cart-display" class="cart-display hidden">
+    <div class="cart-container">
+        <h3>🛒 Your Cart</h3>
+        <div id="cart-items-list" class="cart-items-list">
+            <p class="empty-cart">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Total: </strong>
+                <span id="cart-total-price">₹0</span>
+            </div>
+            <button class="clear-cart-btn" onclick="clearCart()">Clear Cart</button>
+            <button class="whatsapp-btn-cart" onclick="checkoutWithWhatsApp()">Checkout on WhatsApp</button>
+        </div>
+    </div>
+</div>
+
+<section class="hero">
+    <h2>Bedsheets Collection</h2>
+    <p>Explore our premium range of comfortable & stylish bedsheets</p>
+</section>
+
+<section class="products">
+    <div class="product-grid">
+        <!-- Bedsheet 01 -->
+        <div class="card">
+            <button class="wishlist-btn" onclick="toggleWishlist(event)">🤍</button>
+            <img src="image/bedsheet01.jpeg" alt="Bedsheet Design 1">
+            <h3>Bedsheet Design 1</h3>
+            <p>Premium Cotton Bedsheet</p>
+            <div class="price">₹599</div>
+            <button onclick="addToCart('Bedsheet Design 1', 599)">Add to Cart</button>
+        </div>
+
+        <!-- Bedsheet 02 -->
+        <div class="card">
+            <button class="wishlist-btn" onclick="toggleWishlist(event)">🤍</button>
+            <img src="image/bedsheet02.jpeg" alt="Bedsheet Design 2">
+            <h3>Bedsheet Design 2</h3>
+            <p>Premium Cotton Bedsheet</p>
+            <div class="price">₹599</div>
+            <button onclick="addToCart('Bedsheet Design 2', 599)">Add to Cart</button>
+        </div>
+
+        <!-- Bedsheet 03 -->
+        <div class="card">
+            <button class="wishlist-btn" onclick="toggleWishlist(event)">🤍</button>
+            <img src="image/bedsheet03.jpeg" alt="Bedsheet Design 3">
+            <h3>Bedsheet Design 3</h3>
+            <p>Premium Cotton Bedsheet</p>
+            <div class="price">₹599</div>
+            <button onclick="addToCart('Bedsheet Design 3', 599)">Add to Cart</button>
+        </div>
+
+        <!-- Bedsheet 04 -->
+        <div class="card">
+            <button class="wishlist-btn" onclick="toggleWishlist(event)">🤍</button>
+            <img src="image/bedsheet04.jpeg" alt="Bedsheet Design 4">
+            <h3>Bedsheet Design 4</h3>
+            <p>Premium Cotton Bedsheet</p>
+            <div class="price">₹599</div>
+            <button onclick="addToCart('Bedsheet Design 4', 599)">Add to Cart</button>
+        </div>
+
+        <!-- Bedsheet 05 -->
+        <div class="card">
+            <button class="wishlist-btn" onclick="toggleWishlist(event)">🤍</button>
+            <img src="image/bedsheet05.jpeg" alt="Bedsheet Design 5">
+            <h3>Bedsheet Design 5</h3>
+            <p>Premium Cotton Bedsheet</p>
+            <div class="price">₹599</div>
+            <button onclick="addToCart('Bedsheet Design 5', 599)">Add to Cart</button>
+        </div>
+
+        <!-- Bedsheet 06 -->
+        <div class="card">
+            <button class="wishlist-btn" onclick="toggleWishlist(event)">🤍</button>
+            <img src="image/bedsheet06.jpeg" alt="Bedsheet Design 6">
+            <h3>Bedsheet Design 6</h3>
+            <p>Premium Cotton Bedsheet</p>
+            <div class="price">₹599</div>
+            <button onclick="addToCart('Bedsheet Design 6', 599)">Add to Cart</button>
+        </div>
+
+        <!-- Bedsheet 07 -->
+        <div class="card">
+            <button class="wishlist-btn" onclick="toggleWishlist(event)">🤍</button>
+            <img src="image/bedsheet07.jpeg" alt="Bedsheet Design 7">
+            <h3>Bedsheet Design 7</h3>
+            <p>Premium Cotton Bedsheet</p>
+            <div class="price">₹599</div>
+            <button onclick="addToCart('Bedsheet Design 7', 599)">Add to Cart</button>
+        </div>
+
+        <!-- Bedsheet 08 -->
+        <div class="card">
+            <button class="wishlist-btn" onclick="toggleWishlist(event)">🤍</button>
+            <img src="image/bedsheet08.jpeg" alt="Bedsheet Design 8">
+            <h3>Bedsheet Design 8</h3>
+            <p>Premium Cotton Bedsheet</p>
+            <div class="price">₹599</div>
+            <button onclick="addToCart('Bedsheet Design 8', 599)">Add to Cart</button>
+        </div>
+
+        <!-- Bedsheet 09 -->
+        <div class="card">
+            <button class="wishlist-btn" onclick="toggleWishlist(event)">🤍</button>
+            <img src="image/bedsheet09.jpeg" alt="Bedsheet Design 9">
+            <h3>Bedsheet Design 9</h3>
+            <p>Premium Cotton Bedsheet</p>
+            <div class="price">₹599</div>
+            <button onclick="addToCart('Bedsheet Design 9', 599)">Add to Cart</button>
+        </div>
+
+        <!-- Bedsheet 10 -->
+        <div class="card">
+            <button class="wishlist-btn" onclick="toggleWishlist(event)">🤍</button>
+            <img src="image/bedsheet10.jpeg" alt="Bedsheet Design 10">
+            <h3>Bedsheet Design 10</h3>
+            <p>Premium Cotton Bedsheet</p>
+            <div class="price">₹599</div>
+            <button onclick="addToCart('Bedsheet Design 10', 599)">Add to Cart</button>
+        </div>
+
+        <!-- Bedsheet 11 -->
+        <div class="card">
+            <button class="wishlist-btn" onclick="toggleWishlist(event)">🤍</button>
+            <img src="image/bedsheet11.jpeg" alt="Bedsheet Design 11">
+            <h3>Bedsheet Design 11</h3>
+            <p>Premium Cotton Bedsheet</p>
+            <div class="price">₹599</div>
+            <button onclick="addToCart('Bedsheet Design 11', 599)">Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Pluto Home. All rights reserved.</p>
+</footer>
+
+<style>
+.cart-icon {
+    background: #25D366;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.cart-icon:hover {
+    background: #20BA5A;
+}
+
+.cart-display {
+    background: #f9f9f9;
+    border-bottom: 2px solid #ddd;
+    padding: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    width: 300px;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    border-radius: 8px;
+}
+
+.cart-display.hidden {
+    display: none;
+}
+
+.cart-container h3 {
+    margin: 0 0 15px 0;
+    color: #000;
+    font-size: 18px;
+}
+
+.cart-items-list {
+    margin-bottom: 15px;
+}
+
+.cart-item {
+    background: white;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart-item-info {
+    flex: 1;
+}
+
+.cart-item-name {
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+}
+
+.cart-item-price {
+    color: #d9534f;
+    font-size: 13px;
+}
+
+.cart-item-remove {
+    background: #ff4444;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 11px;
+    margin-left: 10px;
+}
+
+.empty-cart {
+    text-align: center;
+    color: #999;
+    padding: 10px;
+}
+
+.cart-footer {
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+}
+
+.cart-total {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.clear-cart-btn {
+    background: #666;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.whatsapp-btn-cart {
+    background: #25D366;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #d9534f;
+    margin: 10px 0;
+}
+</style>
+
+<script>
+let cart = [];
+
+function updateCartDisplay() {
+    const cartCountEl = document.getElementById('cart-count');
+    const cartItemsList = document.getElementById('cart-items-list');
+    const cartTotalPrice = document.getElementById('cart-total-price');
+
+    cartCountEl.textContent = cart.length;
+
+    if (cart.length === 0) {
+        cartItemsList.innerHTML = '<p class="empty-cart">Your cart is empty</p>';
+        cartTotalPrice.textContent = '₹0';
+    } else {
+        let total = 0;
+        cartItemsList.innerHTML = cart.map((item, index) => {
+            total += item.price;
+            return `
+                <div class="cart-item">
+                    <div class="cart-item-info">
+                        <div class="cart-item-name">${item.name}</div>
+                        <div class="cart-item-price">₹${item.price}</div>
+                    </div>
+                    <button class="cart-item-remove" onclick="removeFromCart(${index})">Remove</button>
+                </div>
+            `;
+        }).join('');
+        cartTotalPrice.textContent = '₹' + total;
+    }
+}
+
+function toggleCartDisplay() {
+    const cartDisplay = document.getElementById('cart-display');
+    cartDisplay.classList.toggle('hidden');
+}
+
+function addToCart(productName, price) {
+    cart.push({ name: productName, price: price });
+    updateCartDisplay();
+    alert(`${productName} added to cart!`);
+}
+
+function removeFromCart(index) {
+    const removed = cart.splice(index, 1);
+    updateCartDisplay();
+    alert(`${removed[0].name} removed from cart`);
+}
+
+function clearCart() {
+    if (cart.length === 0) {
+        alert('Cart is already empty');
+        return;
+    }
+    if (confirm('Are you sure you want to clear your cart?')) {
+        cart = [];
+        updateCartDisplay();
+        alert('Cart cleared');
+    }
+}
+
+function checkoutWithWhatsApp() {
+    if (cart.length === 0) {
+        alert('Your cart is empty! Add items before checkout.');
+        return;
+    }
+
+    const whatsappNumber = prompt('Enter your WhatsApp number (with country code, e.g., 919876543210):');
+    
+    if (!whatsappNumber || whatsappNumber.trim() === '') {
+        alert('WhatsApp number is required to proceed.');
+        return;
+    }
+
+    let orderDetails = 'Hi, I would like to place an order:\n\n';
+    let totalPrice = 0;
+
+    cart.forEach((item, index) => {
+        orderDetails += `${index + 1}. ${item.name} - ₹${item.price}\n`;
+        totalPrice += item.price;
+    });
+
+    orderDetails += `\nTotal: ₹${totalPrice}\n\nPlease confirm my order.`;
+
+    const encodedMessage = encodeURIComponent(orderDetails);
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    window.open(whatsappUrl, '_blank');
+
+    cart = [];
+    updateCartDisplay();
+    alert('Order sent to WhatsApp! You will be redirected shortly.');
+}
+
+function toggleWishlist(event) {
+    event.target.classList.toggle('active');
+    if (event.target.classList.contains('active')) {
+        event.target.textContent = '❤️';
+    } else {
+        event.target.textContent = '🤍';
+    }
+}
+</script>
+
+</body>
+</html>

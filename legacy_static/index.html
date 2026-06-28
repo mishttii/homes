@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pluto Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🏠 Pluto Home </h1>
+    <nav>
+        <a href="#products">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Make Your Home Cozy & Stylish</h2>
+    <p>Premium Home Furnishing Essentials</p>
+</section>
+
+<section class="features">
+    <h2 class="features-title">Why Our Customers Love Us</h2>
+    <div class="features-grid">
+        <div class="feature-card">
+            <div class="feature-icon">⭐</div>
+            <h3>Premium Quality</h3>
+            <p>Handpicked products that meet our high standards for comfort and durability.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">💎</div>
+            <h3>Affordable Luxury</h3>
+            <p>Premium quality at prices that won't break the bank. Luxury for everyone.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🚚</div>
+            <h3>Fast  Shipping</h3>
+            <p>Quick delivery to your doorstep with free shipping on orders over minimum value.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">❤️</div>
+            <h3>Customer Care</h3>
+            <p>Our dedicated support team is here 24/7 to help with any questions or concerns.</p>
+        </div>
+    </div>
+</section>
+
+<section id="products" class="products">
+    <h2>Our Products</h2>
+
+    <div class="product-grid">
+
+        <div class="card">
+            <button class="wishlist-btn" onclick="toggleWishlist(event)">🤍</button>
+            <img src="image/blue01.PNG" alt="Pillow Cover" onclick="window.location.href='pillow-products.html'" style="cursor: pointer;">
+            <h3>Pillow Covers</h3>
+            <p>Soft, stylish & breathable pillow covers.</p>
+            <button onclick="window.location.href='pillow-products.html'">View More</button>
+        </div>
+
+        <div class="card">
+            <button class="wishlist-btn" onclick="toggleWishlist(event)">🤍</button>
+            <img src="image/bedsheet01.jpeg" alt="Bedsheet" onclick="window.location.href='bedsheet-products.html'" style="cursor: pointer;">
+            <h3>Bedsheets</h3>
+            <p>Comfortable bedsheets for peaceful sleep.</p>
+            <button onclick="window.location.href='bedsheet-products.html'">View More</button>
+        </div>
+
+        <div class="card">
+            <button class="wishlist-btn" onclick="toggleWishlist(event)">🤍</button>
+            <img src="images/bathmat.jpg" alt="Bathmat">
+            <h3>Bath Mats</h3>
+            <p>Absorbent and anti-slip bath mats.</p>
+            <button>View More</button>
+        </div>
+
+        <div class="card">
+            <button class="wishlist-btn" onclick="toggleWishlist(event)">🤍</button>
+            <img src="images/rug.jpg" alt="Rugs">
+            <h3>Rugs</h3>
+            <p>Modern rugs to elevate your space.</p>
+            <button>View More</button>
+        </div>
+
+    </div>
+</section>
+
+<section id="about" class="about">
+    <h2>About Pluto Home</h2>
+    <p>
+        Pluto Home brings premium quality home furnishing products
+        designed to add comfort and elegance to your living spaces.
+    </p>
+</section>
+
+<section class="testimonials">
+    <h2 class="testimonials-title">What Our Customers Say</h2>
+    <div class="testimonials-grid">
+        <div class="testimonial-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-text">"The pillow covers are absolutely amazing! So soft and the colors are vibrant. Pluto Home is my go-to for home essentials now."</p>
+            <p class="customer-name">Sarah Johnson</p>
+            <p class="customer-title">Homeowner, NYC</p>
+        </div>
+        <div class="testimonial-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-text">"Best bedsheets I've ever owned! They're so comfortable and have lasted through so many washes. Highly recommend!"</p>
+            <p class="customer-name">Michael Chen</p>
+            <p class="customer-title">Business Professional, CA</p>
+        </div>
+        <div class="testimonial-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-text">"The quality of the rugs is outstanding. They add such warmth to my living room. Great customer service too!"</p>
+            <p class="customer-name">Emily Davis</p>
+            <p class="customer-title">Interior Designer, TX</p>
+        </div>
+    </div>
+</section>
+
+<footer id="contact">
+    <p>📧 pluto.home@gmail.com</p>
+    <p>📞 +91 9355630402</p>
+    <p>© 2026 Pluto Home. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
